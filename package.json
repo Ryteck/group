@@ -1,0 +1,42 @@
+{
+  "name": "group",
+  "version": "1.0.0",
+  "main": "./public/electron.js",
+  "repository": "https://github.com/ryteck/group.git",
+  "author": "Ryan Gomes Martins <ryteckgm@gmail.com>",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "electron": "^13.0.1",
+    "electron-is-dev": "^2.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
+    "eslint-plugin-react": "^7.23.2",
+    "react-scripts": "^4.0.3",
+    "wait-on": "^5.3.0"
+  },
+  "scripts": {
+    "react-dev": "react-scripts start",
+    "react-build": "react-scripts build",
+    "electron-dev": "concurrently \"yarn react-dev\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
